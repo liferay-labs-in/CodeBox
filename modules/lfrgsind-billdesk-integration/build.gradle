@@ -1,0 +1,9 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
+	// https://mvnrepository.com/artifact/com.nimbusds/nimbus-jose-jwt
+	compileInclude group: 'com.nimbusds', name: 'nimbus-jose-jwt', version: '9.22'
+	
+	compileInclude group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9'
+}
