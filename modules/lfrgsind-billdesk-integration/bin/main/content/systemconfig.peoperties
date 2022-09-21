@@ -12,7 +12,7 @@ Secret key
 JoGTHd9sJCD6zGH4nNbbAakjtuEaVlAo
 
 Web hook URL
-https://dealerportal-uat.anchor-world.com/group/guest/arresponse
+https://<yourwebsiteURL>/group/guest/arresponse
 
 Merchant id
 PLSIND2UAT

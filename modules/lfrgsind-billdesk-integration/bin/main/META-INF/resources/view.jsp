@@ -76,7 +76,7 @@ function payNow() {
 	    	        		bdOrderId: bdOrderId,
 	    	        		authToken: token,
 	    	        		childWindow: false,
-	    	        		returnUrl: "https://dealerportal-uat.anchor-world.com/group/guest/arresponse",
+	    	        		returnUrl: "https://<yourwebsiteURL>/group/guest/arresponse",
 	    	        		retryCount: 3,
 	    	        		//prefs :{"payment_categories": ["card", "emi"] }
 	    	        		}
