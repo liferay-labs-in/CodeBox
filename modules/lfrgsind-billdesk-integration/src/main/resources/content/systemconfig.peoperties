@@ -1,0 +1,28 @@
+// Use these credentials in Bill Desk system configuration
+
+Client id
+plsind2uat
+
+Secret key
+JoGTHd9sJCD6zGH4nNbbAakjtuEaVlAo
+
+Web hook URL
+https://dealerportal-uat.anchor-world.com/group/guest/arresponse
+
+Merchant id
+PLSIND2UAT
+
+Account number
+<Account no>
+
+Create API
+https://pguat.billdesk.io/payments/ve1_2/orders/create
+
+Status API
+https://pguat.billdesk.io/payments/ve1_2/transactions/get
+
+Itemcode
+DIRECT
+
+Currency
+356
