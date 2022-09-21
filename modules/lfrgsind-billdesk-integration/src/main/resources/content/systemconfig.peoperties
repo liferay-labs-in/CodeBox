@@ -1,4 +1,9 @@
 // Use these credentials in Bill Desk system configuration
+Download the module import it to your LDS, Deploy and set system configuration as per in 
+systemconfig.properties,Please don't share these details I have just kept for testing and it 
+is of one of client.I will remove later.
+
+@extremely confidentials
 
 Client id
 plsind2uat
