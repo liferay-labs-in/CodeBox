@@ -187,7 +187,7 @@ public class LfrgsIndBilldeskUtil {
 			//Extract token from response
 			try {
 			String  jsonAray=responseObj.getString("links");
-			System.out.println("Response is "+jsonAray);
+			_log.debug("Response is "+jsonAray);
 			JSONArray arrayRes=JSONFactoryUtil.createJSONArray(jsonAray);
 			JSONObject jsonObj=arrayRes.getJSONObject(1).getJSONObject("headers");
 			tokenString=jsonObj.getString("authorization");

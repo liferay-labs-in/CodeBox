@@ -8,6 +8,8 @@ import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.json.JSONArray;
 import com.liferay.portal.kernel.json.JSONFactoryUtil;
 import com.liferay.portal.kernel.json.JSONObject;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.model.User;
 import com.liferay.portal.kernel.module.configuration.ConfigurationException;
 import com.liferay.portal.kernel.module.configuration.ConfigurationProviderUtil;
@@ -50,7 +52,7 @@ import org.osgi.service.component.annotations.Component;
 	service = Portlet.class
 )
 public class LfrGsIndBilldeskIntegrationPortlet extends MVCPortlet {
-	
+	private Log _log=LogFactoryUtil.getLog(LfrGsIndBilldeskIntegrationPortlet.class);
 	@Override
 	public void serveResource(ResourceRequest resourceRequest, ResourceResponse resourceResponse)
 			throws PortletException, IOException {
@@ -64,7 +66,6 @@ public class LfrGsIndBilldeskIntegrationPortlet extends MVCPortlet {
 		String token=null;
 		String bdOrderId=null;
 		String OrderInvoiceData = ParamUtil.getString(resourceRequest, "OrderData");
-		System.out.println("Order data"+OrderInvoiceData);
 		ThemeDisplay themeDisplay = (ThemeDisplay) resourceRequest.getAttribute(WebKeys.THEME_DISPLAY);
 		User user=null;
 		String paymentRecepientNo=null;
@@ -79,7 +80,6 @@ public class LfrGsIndBilldeskIntegrationPortlet extends MVCPortlet {
 		double totalAmount = 0;
 		try {
 			JSONArray jsonArray = JSONFactoryUtil.createJSONArray(OrderInvoiceData);
-			System.out.println("Jsonaray "+jsonArray);
 			int noOfDoc = 0;
 
 			paymentRecepientNo = getPaymentReceiptNo();
@@ -92,7 +92,7 @@ public class LfrGsIndBilldeskIntegrationPortlet extends MVCPortlet {
 				noOfDoc = jsonArray.length();
 			}
 		}catch(Exception e) {
-			System.out.println("Error hgetting values");
+			_log.error("Error getting payment from billdesk"+e.getMessage());
 		}
 		
 		//add payment detail in lifreay custom table using service builder
