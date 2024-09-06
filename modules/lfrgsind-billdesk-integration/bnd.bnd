@@ -1,0 +1,7 @@
+Bundle-Name: lfrgsind-billdesk-integration
+Bundle-SymbolicName: com.liferay.gsindia
+Bundle-Version: 1.0.0
+Export-Package: \
+	com.liferay.gsindia.constants,\
+	com.liferay.gsindia.billdesk.util
+Import-Package: *;resolution:="optional"
