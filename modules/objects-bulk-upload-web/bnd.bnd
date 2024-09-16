@@ -1,0 +1,4 @@
+Bundle-Name: objects-bulk-upload
+Bundle-SymbolicName: com.liferay.asserts.objects.bulk.upload.web
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.asserts.objects.bulk.upload.web.constants
