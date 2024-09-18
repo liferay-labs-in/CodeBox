@@ -22,7 +22,7 @@ public class ObjectBulkUploadConfigurationUtil {
     private static Log _log = LogFactoryUtil.getLog(ObjectBulkUploadConfigurationUtil.class);
 
     /**
-     * Retrieves the ObjectDefinition for the given objectId.
+     * Retrieves the ObjectDefinition map for the given list of object definition.
      *
      * @param serviceBuilderObjectDefinition List of Object definition.
      * @return The ObjectDefinition associated with the given objectId.
