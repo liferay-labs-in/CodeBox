@@ -1,0 +1,4 @@
+Bundle-Name: excelsheet-picklist-bulk-upload
+Bundle-SymbolicName: com.excel.feature.bulk.upload.picklist
+Bundle-Version: 1.0.0
+Export-Package: com.excel.feature.bulk.upload.picklist.constants
