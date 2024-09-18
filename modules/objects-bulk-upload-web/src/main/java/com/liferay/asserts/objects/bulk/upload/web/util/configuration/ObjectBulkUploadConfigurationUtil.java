@@ -10,12 +10,30 @@ import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 /**
  * @author Akhash R
  */
 public class ObjectBulkUploadConfigurationUtil {
 
     private static Log _log = LogFactoryUtil.getLog(ObjectBulkUploadConfigurationUtil.class);
+
+    /**
+     * Retrieves the ObjectDefinition for the given objectId.
+     *
+     * @param serviceBuilderObjectDefinition List of Object definition.
+     * @return The ObjectDefinition associated with the given objectId.
+     */
+    public static Map<Long, String> _getObjectDefinitionMap(List<ObjectDefinition> serviceBuilderObjectDefinition) {
+        return serviceBuilderObjectDefinition.stream()
+                .collect(Collectors.toMap(
+                        ObjectDefinition::getObjectDefinitionId,
+                        object -> object.getLabel(object.getDefaultLanguageId())
+                ));
+    }
 
     /**
      * Retrieves the ObjectDefinition for the given objectId.
