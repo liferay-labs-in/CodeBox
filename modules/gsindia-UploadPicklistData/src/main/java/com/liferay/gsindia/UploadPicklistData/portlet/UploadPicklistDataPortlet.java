@@ -1,6 +1,6 @@
-package com.excel.feature.bulk.upload.picklist.portlet;
+package com.liferay.gsindia.UploadPicklistData.portlet;
 
-import com.excel.feature.bulk.upload.picklist.constants.ExcelFeaturePicklistBulkUploadPortletKeys;
+import com.liferay.gsindia.UploadPicklistData.constants.UploadPicklistDataPortletKeys;
 import com.liferay.list.type.model.ListTypeDefinition;
 import com.liferay.list.type.model.ListTypeEntry;
 import com.liferay.list.type.service.ListTypeDefinitionLocalServiceUtil;
@@ -44,17 +44,17 @@ import java.util.Map;
                 "com.liferay.portlet.display-category=category.sample",
                 "com.liferay.portlet.header-portlet-css=/css/main.css",
                 "com.liferay.portlet.instanceable=true",
-                "javax.portlet.display-name=ExcelFeaturePicklistBulkUpload",
+                "javax.portlet.display-name=UploadPicklistData",
                 "javax.portlet.init-param.template-path=/",
                 "javax.portlet.init-param.view-template=/view.jsp",
-                "javax.portlet.name=" + ExcelFeaturePicklistBulkUploadPortletKeys.EXCELFEATUREPICKLISTBULKUPLOAD,
+                "javax.portlet.name=" + UploadPicklistDataPortletKeys.UPLOADPICKLISTDATA,
                 "javax.portlet.resource-bundle=content.Language",
                 "javax.portlet.security-role-ref=power-user,user"
         },
         service = Portlet.class
 )
-public class ExcelFeaturePicklistBulkUploadPortlet extends MVCPortlet {
-    private static final Log log = LogFactoryUtil.getLog(ExcelFeaturePicklistBulkUploadPortlet.class);
+public class UploadPicklistDataPortlet extends MVCPortlet {
+    private static final Log log = LogFactoryUtil.getLog(UploadPicklistDataPortlet.class);
 
     private static final String EXCELFILEUPLOADFIELDNAME = "fileName";
     private static final String EXCELFILEUPLOADTABLENAME = "tableName";
