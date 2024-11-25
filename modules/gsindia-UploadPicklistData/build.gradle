@@ -1,0 +1,12 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+
+	compileOnly group: 'org.apache.poi', name: 'poi', version: '3.9' ,transitive: false
+	compileOnly group: 'org.apache.poi', name: 'poi-ooxml', version: '3.9', transitive: false
+	compileOnly group: 'org.apache.poi', name: 'ooxml-schemas', version: '1.0' , transitive: false
+	compileOnly group: 'org.apache.xmlbeans', name: 'xmlbeans', version: '3.1.0' ,transitive: false
+	compileOnly group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
+	compileOnly group: 'org.apache.commons', name: 'commons-compress', version: '1.21'
+
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.1.4"
+}

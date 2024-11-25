@@ -1,0 +1,4 @@
+Bundle-Name: gsindia-UploadPicklistData
+Bundle-SymbolicName: com.liferay.gsindia.UploadPicklistData
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.gsindia.UploadPicklistData.constants
