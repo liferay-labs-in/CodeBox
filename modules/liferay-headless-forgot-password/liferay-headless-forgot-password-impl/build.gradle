@@ -1,0 +1,9 @@
+dependencies {
+	api project(":modules:liferay-headless-forgot-password:liferay-headless-forgot-password-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+
+	restBuilder group: "com.liferay", name: "com.liferay.portal.tools.rest.builder", version: "1.0.222"
+}
+
+group = "liferay.headless.forgot.password"

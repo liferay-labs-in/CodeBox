@@ -1,0 +1,9 @@
+apiDir: "../liferay-headless-forgot-password-api/src/main/java"
+apiPackagePath: "liferay.headless.forgot.password"
+application:
+    baseURI: "/liferay-headless-forgot-password"
+    className: "LiferayHeadlessForgotPasswordApplication"
+    name: "LiferayHeadlessForgotPassword"
+author: "Ravi Prakash"
+clientDir: "../liferay-headless-forgot-password-client/src/main/java"
+testDir: "../liferay-headless-forgot-password-test/src/testIntegration/java"

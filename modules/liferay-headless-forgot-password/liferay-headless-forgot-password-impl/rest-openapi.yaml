@@ -1,0 +1,118 @@
+components:
+    schemas:
+        GetSecurityQuestionRequest:
+            description: "Request to get the security question based on email"
+            type: object
+            properties:
+                email:
+                    description: "Email of the user"
+                    type: string
+            required:
+                - email
+
+        ValidateSecurityAnswerRequest:
+            description: "Request to validate the security answer for the given email"
+            type: object
+            properties:
+                email:
+                    description: "Email of the user"
+                    type: string
+                answer:
+                    description: "Security answer provided by the user"
+                    type: string
+            required:
+                - email
+                - answer
+
+        GetSecurityQuestionResponse:
+            description: "Common response structure for API responses"
+            type: object
+            properties:
+                status:
+                    description: "Status of the request"
+                    type: string
+                code:
+                    description: "Response code indicating the result of the request"
+                    type: string
+                errorMessage:
+                    description: "Error message if the request failed"
+                    type: string
+                question:
+                    description: "Security question of the given user"
+                    type: string
+        ValidateSecurityAnswerResponse:
+            description: "Common response structure for API responses"
+            type: object
+            properties:
+                status:
+                    description: "Status of the request"
+                    type: string
+                code:
+                    description: "Response code indicating the result of the request"
+                    type: string
+                errorMessage:
+                    description: "Error message if the request failed"
+                    type: string
+                message:
+                    description: "Security question of the given user"
+                    type: string
+info:
+    description:
+        "API for handling security questions and answers.. A Java client JAR is available for use with the group ID
+        'com.liferay', artifact ID 'com.liferay.sps.headless.forgot.password.client', and version '1.0.0'."
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "SecurityQuestionAPI"
+    version: "v1.0"
+openapi: 3.0.1
+servers:
+    - url: http://localhost:8080/api/v1
+      description: Local server for API testing
+
+paths:
+    "/getSecurityQuestion":
+        post:
+            description: "Get the security question for the provided email"
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/GetSecurityQuestionRequest'
+                    application/xml:
+                        schema:
+                            $ref: '#/components/schemas/GetSecurityQuestionRequest'
+            responses:
+                '200':
+                    description: "Response for fetching security question"
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/GetSecurityQuestionResponse'
+                        application/xml:
+                            schema:
+                                $ref: '#/components/schemas/GetSecurityQuestionResponse'
+    "/validateSecurityAnswer":
+        post:
+            description: "Validate the provided security answer for the given email"
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/ValidateSecurityAnswerRequest'
+                    application/xml:
+                        schema:
+                            $ref: '#/components/schemas/ValidateSecurityAnswerRequest'
+            responses:
+                '200':
+                    description: "Response for validating security answer"
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ValidateSecurityAnswerResponse'
+                        application/xml:
+                            schema:
+                                $ref: '#/components/schemas/ValidateSecurityAnswerResponse'
+
+
+
