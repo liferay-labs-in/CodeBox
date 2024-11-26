@@ -1,0 +1,6 @@
+Bundle-Name: liferay-headless-forgot-password-api
+Bundle-SymbolicName: liferay.headless.forgot.password.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	liferay.headless.forgot.password.dto.v1_0,\
+	liferay.headless.forgot.password.resource.v1_0
