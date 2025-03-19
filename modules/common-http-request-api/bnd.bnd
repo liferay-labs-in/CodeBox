@@ -1,0 +1,4 @@
+Bundle-Name: common-http-request-api
+Bundle-SymbolicName: com.liferay.common.http.request
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.common.http.request.api,\com.liferay.common.http.request.api.constants

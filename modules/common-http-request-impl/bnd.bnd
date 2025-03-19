@@ -1,0 +1,3 @@
+Bundle-Name: common-http-request-impl
+Bundle-SymbolicName: com.liferay.common.http.request.impl
+Bundle-Version: 1.0.0
